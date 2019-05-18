@@ -15,13 +15,13 @@ public class ArticleController {
     @Autowired
     private ArticleRepository articleRepository;
 
-    @GetMapping("/add")
+    @GetMapping("show")
     public @ResponseBody String addNewArticle (@RequestParam String headline) {
 
         Article n = new Article();
         n.setHeadline(headline);
         articleRepository.save(n);
-        return "Saved";
+        return "articles.html";
     }
 
     @GetMapping("/all")

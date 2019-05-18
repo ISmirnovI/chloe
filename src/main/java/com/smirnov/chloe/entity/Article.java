@@ -15,6 +15,22 @@ public class Article {
 
     private String headline;
 
+    private String content;
+
+    private String previewContent;
+
+    public String getPreviewContent() {return previewContent; }
+
+    public void setPreviewContent(String previewContent){
+        this.previewContent = previewContent;
+    }
+
+    public String getContent() {return content; }
+
+    public void setContent(String content){
+        this.content = content;
+    }
+
     public Integer getId(){
         return id;
     }

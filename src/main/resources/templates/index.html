@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:tx="http://www.w3.org/1999/xhtml">
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
@@ -117,17 +117,20 @@
         <div class="row article justify-content-end">
             <img class="fly-icon" src="assets/fly.png">
             <div class="col">
-                <h4 >Самые красивые места на планете</h4>
-                <p th:text="'Hello ' + ${name}"> </p>
-                <p class="popular-articles-1">Я побывала во многих странах и составила<br>
+                <h4 th:text="${article.getHeadline()}">Самые красивые места на планете</h4>
+                <h4 ></h4>
+                <p th:text="${article.getPreviewContent()}"class="popular-articles-1">Я побывала во многих странах и составила<br>
                     вам список мест, которые в не в коем<br>
                     случае не должны пропустить. Откройтесь<br>
                     для себя с другой стороны</p>
             </div>
             <div class="next">
-                <a href="articles.html" style="color: black">
-                    <img class="next-icon" src="assets/next.png">
-                </a>
+                    <button type="button" class="btn btn-outline-secondary">
+                        <a  tx:href="@{/article/show}" style="color: black">
+                        <img class="next-icon" src="assets/next.png">
+                        </a>
+                    </button>
+            </div>
             </div>
         </div>
     </div>
