@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
           crossorigin="anonymous">
     <title>Chloe</title>
@@ -117,8 +117,7 @@
         <div class="row article justify-content-end">
             <img class="fly-icon" src="assets/fly.png">
             <div class="col">
-                <h4 th:text="${article.getHeadline()}">Самые красивые места на планете</h4>
-                <h4 ></h4>
+                <a th:href="@{'/article/' + ${article.getId()}}" ><h4 th:text="${article.getHeadline()}">Самые красивые места на планете</h4></a>
                 <p th:text="${article.getPreviewContent()}"class="popular-articles-1">Я побывала во многих странах и составила<br>
                     вам список мест, которые в не в коем<br>
                     случае не должны пропустить. Откройтесь<br>

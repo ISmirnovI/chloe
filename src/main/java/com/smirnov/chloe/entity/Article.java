@@ -1,9 +1,6 @@
 package com.smirnov.chloe.entity;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 public class Article {
@@ -15,6 +12,7 @@ public class Article {
 
     private String headline;
 
+    @Column(length = 4000)
     private String content;
 
     private String previewContent;
