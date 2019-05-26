@@ -12,7 +12,8 @@ public class Article {
 
     private String headline;
 
-    @Column(length = 4000)
+    @Lob
+    @Column(columnDefinition = "TEXT")
     private String content;
 
     private String previewContent;
